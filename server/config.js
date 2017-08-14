@@ -21,7 +21,7 @@ const CONF = {
         port: 3306,
         user: 'root',
         db: 'cAuth',
-        pass: '小程序的 Appid',
+        pass: 'wxe14fafce17f6f9d0',
         char: 'utf8mb4'
     },
 

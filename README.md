@@ -10,7 +10,7 @@ Wafer 2.0 版本的基础代码资源库
 
 打开[微信公众平台](https://mp.weixin.qq.com)注册并登录小程序，进入[腾讯云](https://www.qcloud.com/login)，点击右下角“微信公众号”按钮，使用绑定了小程序的微信扫码登录，即成功授权小程序给腾讯云。
 
-####下载代码
+#### 下载代码
 
 点击本页面右边绿色的“Clone or download”按钮，然后点击“Download ZIP”下载代码。
 

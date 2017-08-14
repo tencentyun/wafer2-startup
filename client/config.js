@@ -13,16 +13,16 @@ var config = {
         host,
 
         // 登录地址，用于建立会话
-        loginUrl: `http://${host}/login`,
+        loginUrl: `https://${host}/login`,
 
         // 测试的请求地址，用于测试会话
-        requestUrl: `http://${host}/user`,
+        requestUrl: `https://${host}/user`,
 
         // 测试的信道服务地址
-        tunnelUrl: `http://${host}/tunnel`,
+        tunnelUrl: `https://${host}/tunnel`,
 
         // 上传图片接口
-        uploadUrl: `http://${host}/upload`
+        uploadUrl: `https://${host}/upload`
     }
 };
 

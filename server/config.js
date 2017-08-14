@@ -23,7 +23,7 @@ const CONF = {
         db: 'cAuth',
         pass: '小程序的 Appid',
         char: 'utf8mb4'
-    },  
+    },
 
     cos: {
         /**

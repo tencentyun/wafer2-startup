@@ -1,6 +1,6 @@
 const CONF = {
     port: '5757',
-    routeBasePath: '',
+    rootPathname: '/weapp',
 
     // 微信小程序 App ID
     appId: '',
@@ -21,7 +21,7 @@ const CONF = {
         port: 3306,
         user: 'root',
         db: 'cAuth',
-        pass: 'wxe14fafce17f6f9d0',
+        pass: 'wx6a8cd7265e258ec7',
         char: 'utf8mb4'
     },
 

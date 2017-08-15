@@ -44,7 +44,13 @@ npm install
 
 ![上传代码](https://user-images.githubusercontent.com/3380894/29261693-717983f6-8103-11e7-8098-5776fcac2403.png)
 
-上传代码完成之后，点击“部署测试环境”，即可将刚刚上传的代码部署到开发环境中，这一步会返回一个腾讯云自动分配的二级域名，域名已经配置好了 HTTPS 证书，将这个域名写到 `client/config.js` 中，这样，客户端的 Demo 也配置完成，你可以开始联调了。你还可以直接通过这个二级域名访问、开发和测试：
+上传代码完成之后，点击“部署测试环境”，即可将刚刚上传的代码部署到开发环境中，这一步会返回一个腾讯云自动分配的二级域名，域名已经配置好了 HTTPS 证书，将这个域名写到 `client/config.js` 中，并关闭 TLS 校验：
+
+![二级域名](https://user-images.githubusercontent.com/3380894/29307433-6c6e686e-81d4-11e7-8dd1-bfb00a387cc3.png)
+
+![关闭 TLS 校验](https://user-images.githubusercontent.com/3380894/29307432-6c6b675e-81d4-11e7-9524-e0f404c7ad91.png)
+
+这样，客户端的 Demo 也配置完成，你可以开始联调了。你还可以直接通过这个二级域名访问、开发和测试：
 
 ![部署测试环境](https://user-images.githubusercontent.com/3380894/29261608-0060780a-8103-11e7-8108-b6b7b9c6d4bc.png)
 

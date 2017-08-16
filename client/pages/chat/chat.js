@@ -89,7 +89,7 @@ Page({
         // 如果登录过，会记录当前用户在 this.me 上
         if (!this.me) {
             qcloud.request({
-                url: `https://${config.service.host}/user`,
+                url: config.service.requestUrl,
                 login: true,
                 success: (response) => {
                     this.me = response.data.data;

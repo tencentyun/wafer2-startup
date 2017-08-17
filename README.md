@@ -25,7 +25,7 @@ Wafer 2.0 基础 Demo 代码资源库
 
 ### 二、安装开发工具
 
-下载并安装[微信开发者工具 1.0](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)，使用小程序绑定的微信号扫码登录开发者工具。
+下载并安装[微信开发者工具测试版](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/beta.html)，使用小程序绑定的微信号扫码登录开发者工具。
 
 ![微信开发者工具](https://user-images.githubusercontent.com/3380894/29358006-2ba9cda4-82ac-11e7-8417-4df838750270.png)
 

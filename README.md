@@ -21,17 +21,19 @@ Wafer 2.0 客户端和服务端集合 Demo 仓库。
 
 ### 一、通过微信公众平台授权登录腾讯云
 
-打开[腾讯云登录页面](https://www.qcloud.com/login?s_url=https%3A%2F%2Fconsole.qcloud.com%2Flav2)，点击右下角的微信公众号登录。此后会弹出一个二维码，通过小程序绑定的微信扫码即可将小程序授权给腾讯云，开通之后会自动进去**腾讯云微信小程序控制台**会显示开发环境已开通，此时可以进行接下来的操作。
+打开[微信公众平台](https://mp.weixin.qq.com)注册并登录小程序，点击左侧菜单栏中的“设置”，接着点击右侧 Tab 栏中的“开发者工具”，接着点击“腾讯云”，进入腾讯云工具页面，点击开通。此后会弹出一个二维码，通过小程序绑定的微信扫码即可将小程序授权给腾讯云，开通之后会自动进去腾讯云微信小程序控制台，显示开发环境已开通，此时可以进行接下来的操作。
 
 ###### 此时通过小程序开发者工具查看腾讯云状态并不会同步，状态会在第一次部署开发环境之后才会同步腾讯云的状态到微信开发者工具上。
 
-![授权](https://user-images.githubusercontent.com/3380894/29394955-4fe69d2a-8340-11e7-991e-38816fc74225.jpg)
+![进入微信公众平台后台](https://user-images.githubusercontent.com/3380894/29357289-92f2745a-82a9-11e7-9b42-d1a530f94da2.jpg)
+
+![开通腾讯云](https://user-images.githubusercontent.com/3380894/29357290-92f31086-82a9-11e7-818a-038a0cfd72fc.jpg)
 
 ![腾讯云微信小程序控制台](https://user-images.githubusercontent.com/3380894/29357742-2c97ba88-82ab-11e7-8947-de819ad5aa45.png)
 
 ### 二、安装开发工具
 
-下载并安装[微信开发者工具测试版](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/beta.html)，使用小程序绑定的微信号扫码登录开发者工具。
+下载并安装[微信开发者工具 1.0](https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html)，使用小程序绑定的微信号扫码登录开发者工具。
 
 ![微信开发者工具](https://user-images.githubusercontent.com/3380894/29358006-2ba9cda4-82ac-11e7-8417-4df838750270.png)
 
@@ -67,11 +69,11 @@ npm install
 
 ![上传代码](https://user-images.githubusercontent.com/3380894/29361218-1bd9af72-82b9-11e7-9dab-d20fd9aebf7c.png)
 
-进入开发者工具之后，点击界面右上角的腾讯云按钮，在下拉的菜单栏中选择“上传并部署代码”，勾选“node_modules之外的代码”和“node_modules”，点击确定开始上传并部署代码：
+进入开发者工具之后，点击界面右上角的腾讯云按钮，在下拉的菜单栏中选择“上传测试代码”，选择“模块上传”并勾选“node_modules之外的代码”和“node_modules”，点击确定开始上传代码：
 
-![上传代码](https://user-images.githubusercontent.com/3380894/29361779-a3606c72-82bb-11e7-863e-d7bc0b806787.jpg)
+<img width="1341" alt="上传代码" src="https://user-images.githubusercontent.com/3380894/29876217-bc3a37aa-8dce-11e7-9486-98417ccadfbf.png">
 
-![勾选两个选项并点击确定](https://user-images.githubusercontent.com/3380894/29361778-a35a116a-82bb-11e7-9f70-0321190ed2e4.jpg)
+<img width="1341" alt="勾选两个选项并点击确定" src="https://user-images.githubusercontent.com/3380894/29876209-b73f4b14-8dce-11e7-8d4b-cfb5a0b4c809.png">
 
 上传代码完成之后，点击右上角的“项目”按钮，接着选择“腾讯云状态”即可看到腾讯云自动分配给你的开发环境域名：
 
@@ -85,7 +87,7 @@ npm install
 
 ![登录测试](https://user-images.githubusercontent.com/3380894/29362214-968fd67a-82bd-11e7-899e-76cd7c92d969.jpg)
 
-## 文档
+## 其他文档
 
 我们还提供了服务端、客户端的 Demo、SDK 的具体文档：
 
@@ -107,7 +109,6 @@ npm install
   - [微信后台如何配置客服消息推送接口](https://github.com/tencentyun/wafer2-startup/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%BE%AE%E4%BF%A1%E5%90%8E%E5%8F%B0%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E5%AE%A2%E6%9C%8D%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81%E6%8E%A5%E5%8F%A3)
   - [如何使用服务端 SDK 连接和操作数据库](https://github.com/tencentyun/wafer2-startup/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E7%AB%AF-sdk-%E8%BF%9E%E6%8E%A5%E5%92%8C%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93)
   - [本地如何搭建开发环境](https://github.com/tencentyun/wafer2-startup/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98#%E6%9C%AC%E5%9C%B0%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83)
-
 - [Wafer2 服务端 Demo 文档](./server/README.md)
 - [Wafer2 服务端 Demo 工具文档](./server/tools.md)
 - [Wafer2 客户端 Demo 文档](./client/README.md)

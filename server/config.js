@@ -21,7 +21,7 @@ const CONF = {
         port: 3306,
         user: 'root',
         db: 'cAuth',
-        pass: 'wx6a8cd7265e258ec7',
+        pass: '',
         char: 'utf8mb4'
     },
 
@@ -37,7 +37,7 @@ const CONF = {
          */
         region: 'cn-south',
         // Bucket 名称
-        fileBucket: 'qcloudtest',
+        fileBucket: 'wximg',
         // 文件夹
         uploadFolder: ''
     },

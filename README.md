@@ -43,7 +43,7 @@ Wafer 2.0 客户端和服务端集合 Demo 仓库。
 
 1. 直接访问 [Release](https://github.com/tencentyun/wafer2-startup/releases)，点击最新版本的代码，下载打包好的 Demo 代码。
 
-2. 通过 git clone 下载代码：
+2. 通过 git clone 下载代码并安装依赖：
 
    ```bash
    git clone https://github.com/tencentyun/wafer2-startup.git
@@ -52,6 +52,10 @@ Wafer 2.0 客户端和服务端集合 Demo 仓库。
 下载好 Demo 代码之后，使用编辑器打开 Demo 代码中 `server` 目录下的 `config.js` 文件，将其中的 `mysql` 配置项的密码 `pass` 改成你的微信小程序 AppID 。
 
 ![修改 MySQL 密码](https://user-images.githubusercontent.com/3380894/29360756-fb2412c4-82b6-11e7-8d6f-c4277cd5d783.jpg)
+
+**安装依赖**
+
+###### 这步非常重要请不要忽略！
 
 接着在下载下来的目录打开 CMD 安装依赖：
 

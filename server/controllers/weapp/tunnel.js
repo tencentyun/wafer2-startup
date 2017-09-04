@@ -1,4 +1,4 @@
-const { tunnel } = require('../qcloud')
+const { tunnel } = require('../../qcloud')
 const debug = require('debug')('koa-weapp-demo')
 
 /**

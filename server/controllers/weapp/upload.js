@@ -1,4 +1,4 @@
-const { uploader } = require('../qcloud')
+const { uploader } = require('../../qcloud')
 
 module.exports = async ctx => {
     // 获取上传之后的结果

@@ -105,6 +105,9 @@ Page({
      * 连接到聊天室信道服务
      */
     connect() {
+        // 避免重复创建信道
+        if (this.tunnel && this.tunnel.isActive()) return;
+
         this.amendMessage(createSystemMessage('正在加入群聊...'));
 
         // 创建信道
@@ -206,7 +209,7 @@ Page({
         // 信道当前不可用
         if (!this.tunnel || !this.tunnel.isActive()) {
             this.pushMessage(createSystemMessage('您还没有加入群聊，请稍后重试'));
-            if (this.tunnel.isClosed()) {
+            if (!this.tunnel || this.tunnel.isClosed()) {
                 this.enter();
             }
             return;

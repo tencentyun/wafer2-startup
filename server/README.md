@@ -26,10 +26,10 @@ npm i
 
 ```bash
 # 开发环境，监听文件变化自动重启，并会输出 debug 信息
-tnpm run dev
+npm run dev
 
 # 线上部署环境
-tnpm start
+npm start
 ```
 
 按照[小程序创建资源配置指引](https://github.com/tencentyun/weapp-doc)进行操作，可以得到运行本示例所需的资源和服务，其中包括已部署好的示例代码及自动下发的 SDK 配置文件 `/etc/qcloud/sdk.config`。

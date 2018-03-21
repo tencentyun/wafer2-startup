@@ -1,0 +1,32 @@
+<view class="page__bd">
+  <view style="height: {{windowHeight}}px; width: {{windowWidth}}px;" class="back_img">
+  </view>
+  <view style="position:absolute;top:{{windowHeight * 0.06}}px;">
+    <image src="../../images/bg_img.jpeg" style="width: {{windowWidth * 0.4}}px;height:{{windowWidth * 0.4}}px; margin-left:{{windowWidth * 0.5 - 80}}px;border-radius:{{windowWidth * 0.2}}px;"></image>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="submit_info" style="top:{{windowHeight * 0.35}}px;width: {{windowWidth * 0.92}}px;">
+      <view class="weui-cells weui-cells_after-title submit_form">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">书名</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入书名" type="text" maxlength="20" focus="true" name="name" value="{{name}}"/>
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">价格</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入价格" type="number" maxlength="13" name="price" value="{{price}}"/>
+          </view>
+        </view>
+        <view class="weui-btn-area">
+          <button class="weui-btn" type="primary" formType="submit" size="default" plain="true">登记</button>
+        </view>
+      </view>
+    </view>
+  </form>
+</view>

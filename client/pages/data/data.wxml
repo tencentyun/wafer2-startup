@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 请求按钮 -->
+  <view class="list">
+    <view class="list-item" bindtap="openForm">
+      <text>form表单示例</text>
+    </view>
+    <!-- <view class="list-item" bindtap="testAdd">
+      <text>新增</text>
+    </view> -->
+    <view class="list-item" bindtap="testUpdate">
+      <text>修改</text>
+    </view>
+    <view class="list-item" bindtap="testDel">
+      <text>删除</text>
+    </view>
+    <view class="list-item" bindtap="testQuery">
+      <text>查询</text>
+    </view>
+    <view class="list-item">
+      <text class="request-text">期望输出：{"code":0,"data":{"msg":"执行的输出结果"}}</text>
+    </view>
+    <view class="list-item" wx:if="{{requestResult}}">
+      <text class="request-text">{{'请求结果：' + requestResult}}</text>
+    </view>
+    <button class="copyBtn" wx:if="{{canIUseClipboard}}" bindtap="copyCode" data-code-id="1">复制结果</button>
+  </view>
+</view>

@@ -57,4 +57,11 @@
             <view bindtap="testReconnect" class="item {{tunnelStatus == 'connected' || 'disabled'}}"><view class="item-inner">测试重连</view></view>
         </view>
     </view>
+    <view class="line">
+        <text>数据库操作示例</text>
+        <view bindtap="openDbDemo" class="demo">
+            跳转至新页面
+            <view class="link">Demo体验 ></view>
+        </view>
+    </view>
 </view>

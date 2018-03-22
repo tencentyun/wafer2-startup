@@ -32,4 +32,10 @@ router.get('/message', controllers.message.get)
 // POST 用来处理微信转发过来的客服消息
 router.post('/message', controllers.message.post)
 
+// --- 数据库操作 Demo --- //
+router.get('/db.query', controllers.dbdemo.query)
+router.get('/db.add', controllers.dbdemo.add)
+router.get('/db.update', controllers.dbdemo.update)
+router.get('/db.del', controllers.dbdemo.del)
+
 module.exports = router

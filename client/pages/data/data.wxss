@@ -1,0 +1,68 @@
+/**index.wxss**/
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.list {
+    margin-top: 40rpx;
+    height: auto;
+    width: 100%;
+    background: #FFF;
+    padding: 0 0 0 40rpx;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-left: none;
+    border-right: none;
+    transition: all 300ms ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.list-item {
+    width: 100%;
+    padding: 0;
+    line-height: 104rpx;
+    font-size: 34rpx;
+    color: #007AFF;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.list-item:first-child {
+    border-top: none;
+}
+
+.request-text {
+    color: #222;
+    padding: 20rpx 0;
+    font-size: 24rpx;
+    line-height: 36rpx;
+    word-break: break-all;
+}
+
+.list-item .code {
+    margin-top: 20rpx;
+    background: rgba(0, 0, 0, .8);
+    padding: 20rpx;
+    font-size: 28rpx;
+    line-height: 36rpx;
+    border-radius: 6rpx;
+    color: #FFF;
+}
+
+.list .copyBtn {
+    width: auto;
+    height: auto;
+    font-size: 24rpx;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    margin-right: 20rpx;
+}

@@ -1,11 +1,5 @@
 <view class="root">
-    <view class="line">
-        <text>综合示例</text>
-        <view bindtap="openChat" class="demo">
-            三木聊天室
-            <view class="link">Demo体验 ></view>
-        </view>
-    </view>
+   
     <view class="line">
         <text>登录接口测试</text>
         <input type="text" value="{{loginUrl}}" disabled class="hide"></input>

@@ -4,7 +4,9 @@
         <text>登录接口测试</text>
         <input type="text" value="{{loginUrl}}" disabled class="hide"></input>
         <view class="line-control">
-            <view bindtap="doLogin" class="item"><view class="item-inner">登录</view></view>
+            <!-- <view bindtap="doLogin" class="item"><view class="item-inner">登录</view></view>  -->
+             <view class="item"><button class="userinfo-nicknam item-inner login-button" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button></view> 
+            
             <view bindtap="clearSession" class="item"><view class="item-inner">清除登录会话</view></view>
         </view>
     </view>

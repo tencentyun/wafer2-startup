@@ -42,6 +42,19 @@
     height: 90rpx;
     line-height: 90rpx;
 }
+.line-control .item-inner::after {
+  border: none;
+}
+
+.line-control .login-button {
+  background-color: white;
+  border-radius: 0;
+  color: #007AFF;
+  font-size: 38rpx;
+  text-align: left;
+  padding-left: 0;
+}
+
 .line-control .item-image {
     text-align: center;
 }

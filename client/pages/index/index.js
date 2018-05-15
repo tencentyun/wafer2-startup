@@ -75,6 +75,75 @@ Page({
     },
 
     /**
+     * 点击「登录」按钮，测试登录功能
+     */
+    bindGetUserInfo: function (e) {
+
+      showBusy('正在登录');
+
+      var that = this;
+      var userInfo = e.detail.userInfo;
+
+      // 查看是否授权
+      wx.getSetting({
+        success: function (res) {
+          if (res.authSetting['scope.userInfo']) {
+
+            // 检查登录是否过期
+            wx.checkSession({
+              success: function () {
+                // 登录态未过期
+                showSuccess('登录成功');
+                console.log('登录成功', userInfo);
+              },
+
+              fail: function () {
+                qcloud.clearSession();
+                // 登录态已过期，需重新登录
+                var options = {
+                  encryptedData: e.detail.encryptedData,
+                  iv: e.detail.iv,
+                  userInfo: userInfo
+                }
+                that.getWxLogin(options);
+              },
+            });
+          } else {
+            showModel('用户未授权', e.detail.errMsg);
+          }
+        }
+      });
+    },
+
+    getWxLogin: function (options) {
+      var that = this;
+
+      wx.login({
+        success: function (loginResult) {
+          var loginParams = {
+            code: loginResult.code,
+            encryptedData: options.encryptedData,
+            iv: options.iv,
+          }
+          qcloud.requestLogin({
+            loginParams, success() {
+              showSuccess('登录成功');
+              console.log('登录成功', options.userInfo);
+            },
+            fail(error) {
+              showModel('登录失败', error)
+              console.log('登录失败', error)
+            }
+          });
+        },
+        fail: function (loginError) {
+          showModel('登录失败', loginError)
+          console.log('登录失败', loginError)
+        },
+      });
+    },
+
+    /**
      * 点击「清除会话」按钮
      */
     clearSession() {

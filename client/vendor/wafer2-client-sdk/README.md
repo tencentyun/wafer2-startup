@@ -4,23 +4,22 @@
 [![Coverage Status](https://coveralls.io/repos/github/tencentyun/wafer-client-sdk/badge.svg?branch=master)](https://coveralls.io/github/tencentyun/wafer-client-sdk?branch=master)
 [![License](https://img.shields.io/github/license/tencentyun/wafer-client-sdk.svg)](LICENSE)
 
-本 项目是 [Wafer](https://github.com/tencentyun/wafer-solution) 的组成部分，为小程序客户端开发提供 SDK 支持会话服务和信道服务。
+本 项目是 [Wafer2](https://github.com/tencentyun/wafer) 的组成部分，为小程序客户端开发提供 SDK 支持会话服务和信道服务。
 
 ## SDK 获取与安装
 
-解决方案[客户端 Demo](https://github.com/tencentyun/wafer-client-demo) 已经集成并使用最新版的 SDK，需要快速了解的可以从 Demo 开始。
+[解决方案 Demo](https://github.com/tencentyun/wafer2-quickstart) 已经集成并使用最新版的 SDK，需要快速了解的可以从 Demo 开始。
 
 如果需要单独开始，本 SDK 已经发布为 bower 模块，可以直接安装到小程序目录中。
 
 ```sh
-npm install -g bower
-bower install qcloud-weapp-client-sdk
+npm install wafer2-client-sdk
 ```
 
 安装之后，就可以使用 `require` 引用 SDK 模块：
 
 ```js
-var qcloud = require('./bower_components/qcloud-weapp-client-sdk/index.js');
+var qcloud = require('./node_modules/wafer2-client-sdk/index.js');
 ```
 
 ## 会话服务
@@ -28,6 +27,51 @@ var qcloud = require('./bower_components/qcloud-weapp-client-sdk/index.js');
 [会话服务](https://github.com/tencentyun/wafer-solution/wiki/%E4%BC%9A%E8%AF%9D%E6%9C%8D%E5%8A%A1)让小程序拥有会话管理能力。
 
 ### 登录
+
+由于微信的 `wx.getUserInfo` 不再弹窗授权，得修改为 button 弹窗获取用户信息。为此我们提供了一个新的 API：`qcloud.requestLogin`，此函数接受了 `code, encryptedData, iv` 以向后台提供用户信息，具体示例如下：
+
+**注意 2.0 版本以上的 Client SDK 需配合 1.4.x 以上版本的 Node.js SDK 或者，2.2.x 以上版本的 PHP SDK。**
+
+```
+// wxml
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="doLogin">获取用户信息</button>
+
+// js
+doLogin: function () {
+    const session = qcloud.Session.get()
+
+    if (session) {
+        // 第二次登录
+        // 或者本地已经有登录态
+        // 可使用本函数更新登录态
+        qcloud.loginWithCode({
+            success: res => {
+                this.setData({ userInfo: res, logged: true })
+                util.showSuccess('登录成功')
+            },
+            fail: err => {
+                console.error(err)
+                util.showModel('登录错误', err.message)
+            }
+        })
+    } else {
+        // 首次登录
+        qcloud.login({
+            success: res => {
+                this.setData({ userInfo: res, logged: true })
+                util.showSuccess('登录成功')
+            },
+            fail: err => {
+                console.error(err)
+                util.showModel('登录错误', err.message)
+            }
+        })
+    }
+}
+```
+
+> 注意，以下接口已经被微信废弃，但为了兼容暂时没有去除，请使用上文所说的按钮获取用户信息样式
+> 微信官方公告：https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=83045995&docid=0000a26e1aca6012e896a517556c01
 
 登录可以在小程序和服务器之间建立会话，服务器由此可以获取到用户的标识和信息。
 

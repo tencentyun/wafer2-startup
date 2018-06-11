@@ -69,11 +69,11 @@ Page({
             qcloud.loginWithCode({
                 success: res => {
                     this.setData({ userInfo: res, logged: true })
-                    util.showSuccess('登录成功')
+                    showSuccess('登录成功')
                 },
                 fail: err => {
                     console.error(err)
-                    util.showModel('登录错误', err.message)
+                    showModel('登录错误', err.message)
                 }
             })
         } else {
@@ -81,11 +81,11 @@ Page({
             qcloud.login({
                 success: res => {
                     this.setData({ userInfo: res, logged: true })
-                    util.showSuccess('登录成功')
+                    showSuccess('登录成功')
                 },
                 fail: err => {
                     console.error(err)
-                    util.showModel('登录错误', err.message)
+                    showModel('登录错误', err.message)
                 }
             })
         }

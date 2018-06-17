@@ -74,13 +74,9 @@ function request(options) {
     function doRequest() {
         var authHeader = {}
 
-        if (requireLogin) {
-            var session = Session.get();
+        var session = Session.get();
     
-            if (!session) {
-                return doRequestWithLogin();
-            }
-    
+        if (session) {
             authHeader = buildAuthHeader(session.skey);
         }
 
@@ -91,7 +87,7 @@ function request(options) {
                 var data = response.data;
 
                 var error, message;
-                if (data && data.code === -1) {
+                if ((data && data.code === -1) || response.statusCode === 401) {
                     Session.clear();
                     // 如果是登录态无效，并且还没重试过，会尝试登录后刷新凭据重新请求
                     if (!hasRetried) {

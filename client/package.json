@@ -11,6 +11,6 @@
   "author": "CFETeam",
   "license": "MIT",
   "dependencies": {
-    "wafer2-client-sdk": "^1.0.0"
+    "wafer2-client-sdk": "^2.1.0"
   }
 }
